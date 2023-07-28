@@ -20,6 +20,14 @@
   $AlessaCanCode = true;
 ```
 
+### Variabeln zusammenfügen
+```php
+$varA = "hello";
+$varB = "world";
+
+$output = $varA." ".$varB; //hello world
+echo $output;
+```
 
 ### Arrays - mehrere Variabeln in einer Variabel
 
