@@ -94,15 +94,70 @@ do{
 ```php
 $alessaIs18 = true;
 if($alessaIs18){
+  echo 'allowed to drink hard alcohol';
+}
+```
+
+### Mit Comparison Operators
+* siehe [Comparison Operator](https://www.php.net/manual/en/language.operators.comparison.php)
+* es folgt ein Beispiel
+```php
+$ageAlessa = 18;
+if($ageAlessa >= 18){
+  echo 'allowed to drink hard alcohol';
+}
+```
+
+| Operator   | Name                   | Description                                                  |
+|------------|------------------------|--------------------------------------------------------------|
+| $a == $b   | Equal                  | True if $a is equal to $b after type juggling.              |
+| $a === $b  | Identical              | True if $a is equal to $b, and they are of the same type.   |
+| $a !== $b  | Not identical          | True if $a is not equal to $b, or they are not of the same type. |
+| $a < $b    | Less than              | True if $a is strictly less than $b.                        |
+| $a > $b    | Greater than           | True if $a is strictly greater than $b.                     |
+| $a >= $b   | Greater than or equal to | True if $a is greater than or equal to $b.                  |
+
+
+### Mit Logical Operators
+* siehe [Logical Operator](https://www.php.net/manual/en/language.operators.logical.php)
+* verwendet, um Bedingungen zu kombinieren - BedingungA && BedingungB -> beide müssen erfüllt sein (AND)
+* es folgt ein Beispiel
+```php
+$ageAlessa = 18;
+$AlessaHasDrivingLiscence = true;
+if($ageAlessa >= 18 && $AlessaHasDrivingLiscence){
   echo 'allowed to drive';
 }
+```
 
-### 
-* direkte Prüfung ohne Operator möglich
+| Operator  | Name         | Description                                              |
+|-----------|--------------|----------------------------------------------------------|
+| $a xor $b | Xor          | True if either $a or $b is true, but not both.         |
+| ! $a      | Not          | True if $a is not true.                                 |
+| $a && $b  | And          | True if both $a and $b are true.                        |
+| $a \|\| $b | Or          | True if either $a or $b is true.                        |
+
+
+### IF-ELSE Statement
+* wenn Kondition nicht übereinstimmt -> etwas anderes machen
 ```php
-$alessaIs18 = true;
+$alessaIs18 = false;
 if($alessaIs18){
-  echo 'allowed to drive';
+  echo 'allowed to drink hard alcohol';
+} else {
+  echo 'not allowed to drink hard alcohol';
+}
+```
+
+### ELSE-IF Statement
+* wenn Kondition nicht übereinstimmt -> auf andere Kondition prüfen
+```php
+$alessaIs18 = false;
+$alessaIs16 = true;
+if($alessaIs18){
+  echo 'allowed to drink hard alcohol';
+} else if ($alessaIs16) {
+  echo 'allowed to drink soft alcohol';
 }
 ```
 
